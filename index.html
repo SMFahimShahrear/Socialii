@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Socialii</title>
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release...">
+    <script src="https://kit.fontawesome.com/6bcd753c4d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -22,11 +22,100 @@
             <div class="create">
                 <label class="btn btn_primary" for="create_post">Create</label>
                 <div class="profile_picture">
-                    <img src="./images/p.p1.jpg" alt="">
+                    <img src="./images/p.p1.jpg">
                 </div>
 
             </div>
         </div>
     </nav>
+
+    <!---Main Section--->
+    <main>
+        <div class="container">
+            <!---Main Left-->
+            <div class="left">
+                <a class="profile">
+                    <div class="profile_picture">
+                        <img src="./images/p.p1.jpg">
+                    </div>
+                    <div class="handle">
+                        <h4>S M Fahim Shahrear</h4>
+                        <p class="text_muted">
+                            @fahimS
+                        </p>
+                    </div>
+                </a>
+                                        <!----------SIDEBAR--------------->
+                <div class="sidebar">
+                    <a class="menu_item active">
+                        <span><i class="fa-solid fa-house-chimney"></i></span><h3>Home</h3>
+                    </a>
+                    <a class="menu_item">
+                        <span><i class="fa-solid fa-compass"></i></span><h3>Explore</h3>
+                    </a>
+                    <a class="menu_item" id="notification">
+                        <span><i class="fa-solid fa-compass"><small class="notification_count">10+</small></span></a></i><h3>Notification</h3>
+                                <!----------------NOTIFICATION POPUP--------------->
+                        <div class="notification_popup">
+                            <div>
+                                <div class="profile_picture">
+                                    <img src="./images/p.p1.jpg">
+                                </div>
+                                <div class="notification_body">
+                                    <b>Asif Hossain</b> accpeted yout friend request
+                                    <small class="text_muted">2 days ago</small>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="profile_picture">
+                                    <img src="./images/p.p1.jpg">
+                                </div>
+                                <div class="notification_body">
+                                    <b>Ahoteshanul Haque Shah</b> accpeted yout friend request
+                                    <small class="text_muted">2 days ago</small>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="profile_picture">
+                                    <img src="./images/p.p1.jpg">
+                                </div>
+                                <div class="notification_body">
+                                    <b>Tanvir Islam</b> accpeted yout friend request
+                                    <small class="text_muted">2 days ago</small>
+                                </div>
+                            </div>
+                        </div>
+                         <!----------------END OF NOTIFICATION POPUP--------------->
+                    </a>
+                    <a class="menu_item" id="message_notifications">
+                        <span><i class="fa-solid fa-bookmark"><small class="notification_count">7+</small></i></span><h3>Message</h3>
+                    </a>
+                    <a class="menu_item">
+                        <span><i class="fa-solid fa-bookmark"></i></span><h3>Bookmark</h3>
+                    </a>
+                    <a class="menu_item">
+                        <span><i class="fa-solid fa-house-chimney"></i></span><h3>Analytics</h3>
+                    </a>
+                    <a class="menu_item">
+                        <span><i class="fa-solid fa-paint-roller"></i></span><h3>Themes</h3>
+                    </a>
+                    <a class="menu_item">
+                        <span><i class="fa-solid fa-gears"></i></span><h3>Settings</h3>
+                    </a>
+
+                </div>
+                <!----------END of SIDEBAR--------------->
+                <label class="btn btn_primary" for="create_post">Create Post</label>
+            </div>
+            <!---Main Moddle-->
+            <div class="middle">
+
+            </div>
+            <!---Main Right-->
+            <div class="right">
+
+            </div>
+        </div>
+    </main>
 </body>
 </html>
