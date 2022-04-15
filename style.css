@@ -376,4 +376,104 @@ main .container .left .profile
     {
         background: url(./images/p.p1.jpg) no-repeat center center/cover;
     }
+
+    .middle .story .profile_picture
+    {
+        width: 2rem;
+        height: 2rem;
+        align-self: start;
+        border: 3px solid var(--color_primary);
+    }
+
+    /*-------------------------------CREATE POST------------------------------------*/
+
+    .middle .create_post
+    {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 1rem;
+        background: var(--color_white);
+        padding: 00.4rem var(--card_padding);
+        border-radius: var(--boder_radious);
+    }
+
+    .middle .create_post input[type="text"]
+    {
+        justify-self: start;
+        width: 100%;
+        padding-left: 1rem;
+        background: transparent;
+        color: var(--color_dark);
+        margin-right: 1rem;
+    }
+
+
+  /*----------------------------FEEDS------------------------------------*/
+
+   .middle .feeds .feed
+   {
+       background: var(--color_white);
+       border-radius: var(--boder_radious);
+       padding: var(--card_padding);
+       margin: 1rem 0;
+       font-size: 0.85rem;
+       line-height: 1.5;
+   }
+
+   .middle .feed .head
+   {
+       display: flex;
+       justify-content: space-between;
+   }
+
+   .middle .feed .user
+   {
+       display: flex;
+       gap: 1rem;
+   }
+
+   .middle .feed .photo
+   {
+       border-radius: var(--card_border_radious);
+       overflow: hidden;
+       margin: 0.8rem 0;
+   }
+
+   .middle .feed .action_btns
+   {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       font-size: 1.5rem;
+       margin: 0.6rem;
+   }
+
+   .middle .liked_by
+   {
+       display: flex;
+   }
+
+   .middle .liked_by span
+   {
+       width: 1.4rem;
+       height: 1.4rem;
+       display: block;
+       border-radius: 50%;
+       overflow: hidden;
+       border: 2px solid var(--color_white);
+       margin-left: -0.7rem;
+   }
+
+   .middle .liked_by span:first-child
+   {
+       margin: 0;
+   }
+
+   .middle .liked_by p
+   {
+       margin-left: 0.5rem;
+   }
+
     /*------------57.35------------------*/
