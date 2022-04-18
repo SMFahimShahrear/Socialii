@@ -1,9 +1,10 @@
 :root
 {
+    --primary_color_hue: 252;
     --color_white:hsl(252, 30%, 100%); 
     --color_light:hsl(252, 30%, 95%); 
     --color_gray:hsl(252, 15%, 65%); 
-    --color_primary:hsl(252, 75%, 60%); 
+    --color_primary:hsl(var(--primary_color_hue), 75%, 60%); 
     --color_secondary:hsl(252, 100%, 90%); 
     --color_vibrant:hsl(120, 95%, 65%); 
     --color_danger:hsl(0, 95%, 65%); 
@@ -16,7 +17,7 @@
     --search_padding: 0.6rem 1rem;
     --card_padding:1rem;
 
-    --sticky_top_left: 5.5rem;
+    --sticky_top_left: 5.4rem;
     --sticky_top_right: -18rem;
     
     
@@ -508,7 +509,7 @@ main .container .left .profile
 
    .right .messages .search_bar
    {
-       display: flex;
+       display: flex; 
        margin-bottom: 1rem;
    }
 
@@ -530,7 +531,7 @@ main .container .left .profile
 
    .right .messages .category .active
    {
-       border-color: var(--color_dark);
+       border-color: var(--color_dark);  
    }
 
    .right .messages .message_requests
@@ -564,7 +565,7 @@ main .container .left .profile
 
    .right .messages .message p
    {
-       font-size: 0.9rem;
+       font-size: 0.8rem;
    }
 
    .right .messages .message .profile_picture .active
@@ -627,6 +628,7 @@ main .container .left .profile
         display: grid;
         place-items: center;
         font-size: 0.9rem;
+        display: none;
     }
 
     .customize_theme .card
@@ -635,6 +637,7 @@ main .container .left .profile
         padding: 3rem;
         border-radius: var(--card_border_radious);
         width: 50%;
+        box-shadow: 0 0 1rem var(--color_primary);
     }
 
     /*---------------------FONT SIZES----------------------------*/
@@ -782,4 +785,106 @@ main .container .left .profile
         margin-right: 1rem;
     }
 
-    /*------------1.43.14------------------*/
+    
+    /*------------MEDIA QUARIES FOR SMALL LAPTOP OR BIG TABLETS------------------*/
+
+    @media screen and (max-width: 1200px) 
+    {
+        .container
+        {
+            width: 96%;
+        }    
+
+        main .container
+        {
+            grid-template-columns: 5rem auto 30vw;
+            gap: 1rem;
+        }
+        
+        .left
+        {
+            width: 5rem;
+            z-index: 5;
+        }
+
+        main .container .left .profile
+        {
+            display: none;
+        }
+
+        .sidebar h3
+        {
+            display: none;
+        }
+
+        .left .btn
+        {
+            display: none;
+        }
+
+        .customize_theme .card
+        {
+            width: 80vw;
+        }
+    }
+    
+    /*------------MEDIA QUARIES FOR SMALL TABLETS OR SMARTPHONES------------------*/
+    @media screen and (max-width: 992px) 
+    {
+        nav .search_bar
+        {
+            display: none;
+        }
+
+        main .container
+        {
+            grid-template-columns: 0 auto 5rem;
+            gap: 0;
+        }
+        
+        main .container .left
+        {
+            grid-column: 3/4;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+        }
+
+         /*--------------------NOTIFICATION POPUP------------------*/
+         .left .notification_popup
+         {
+             position: absolute;
+             left: -20rem;
+             width: 20rem;
+         }
+
+         .left .notification_popup::before
+         {
+             display: absolute;
+             top: 1.3rem;
+             left: calc(20rem - 0.6rem);
+             display: block;
+         }
+
+         main .container .left .search_bar > div h3
+         {
+             display: none;
+         }
+
+         main .container .middle
+         {
+             grid-column: 1/3;
+         }
+
+         main .container .right
+         {
+             display: none;
+         }
+
+         .customize_theme .card
+        {
+            width: 92vw;
+        }
+    }
+
+    /*------------2.27.55------------------*/
