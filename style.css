@@ -114,14 +114,14 @@ nav .container
     justify-content: space-between;
 }
 
-nav .search_bar
+.search_bar
 {
     background: var(--color_light);
     border-radius: var(--boder_radious);
     padding: var(--search_padding);
 }
 
-nav .search_bar input[type="search"]
+.search_bar input[type="search"]
 {
     background: transparent;
     width: 30vw;
@@ -476,4 +476,310 @@ main .container .left .profile
        margin-left: 0.5rem;
    }
 
-    /*------------57.35------------------*/
+   /*--------------------RIGHT------------------------------*/
+
+   main .container .right
+   {
+       height: max-content;
+       position: sticky;
+       top: var(--sticky_top_right);
+       bottom: 0;
+   }
+
+   .right .messages
+   {
+       background: var(--color_white);
+       border-radius: var(--card_border_radious);
+       padding: var(--card_padding);
+   }
+
+   .right .messages .heading
+   {
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       margin-bottom: 1rem;
+   }
+
+   .right .messages i
+   {
+       font-size: 1.4rem;
+   }
+
+   .right .messages .search_bar
+   {
+       display: flex;
+       margin-bottom: 1rem;
+   }
+
+   .right .messages .category
+   {
+       display: flex;
+       justify-content: space-between;
+       margin-bottom: 1rem;
+   }
+
+   .right .messages .category h6
+   {
+       width: 100%;
+       text-align: center;
+       border-bottom: 4px solid var(--color_light);
+       padding-bottom: 0.5rem;
+       font-size: 0.85rem;
+   }
+
+   .right .messages .category .active
+   {
+       border-color: var(--color_dark);
+   }
+
+   .right .messages .message_requests
+   {
+       color: var(--color_primary);
+   }
+
+   .right .messages .message
+   {
+       display: flex;
+       gap: 1rem;
+       margin-bottom: 1rem;
+       align-items: start;
+   }
+
+   .right .message .profile_picture
+   {
+       position: relative;
+       overflow: visible;
+   }
+
+   .right .profile_picture img
+   {
+       border-radius: 50%;
+   }
+
+   .right .messages .message:last-child
+   {
+       margin: 0;
+   }
+
+   .right .messages .message p
+   {
+       font-size: 0.9rem;
+   }
+
+   .right .messages .message .profile_picture .active
+   {
+       width: 0.8rem;
+       height: 0.8rem;
+       border-radius: 50%;
+       border: 3px solid var(--color_white);
+       background: rgb(22, 249, 22);
+       position: absolute;
+       bottom: 0;
+       right: 0;
+   }
+    /*---------------FRIEND REQUESTS------------------*/
+
+    .right .friend_requests
+    {
+        margin-top: 1rem;
+    }
+
+    .right .friend_requests h4
+    {
+        color: var(--color_gray);
+        margin: 1rem 0;
+    }
+
+    .right .request
+    {
+        background: var(--color_white);
+        padding: var(--card_padding);
+        border-radius: var(--card_border_radious);
+        margin-bottom: 0.7rem;
+    }
+
+    .right .request .info
+    {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .right .request .action
+    {
+        display: flex;
+        gap: 1rem;
+    }
+
+    /*----------------------THEME CUSTOMIZATION------------------------------*/
+
+    .customize_theme
+    {
+        background: rgba(255, 255, 255, 0.5);
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        text-align: center;
+        display: grid;
+        place-items: center;
+        font-size: 0.9rem;
+    }
+
+    .customize_theme .card
+    {
+        background-color: var(--color_white);
+        padding: 3rem;
+        border-radius: var(--card_border_radious);
+        width: 50%;
+    }
+
+    /*---------------------FONT SIZES----------------------------*/
+
+    .customize_theme .font_size >div
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: var(--color_light);
+        padding: var(--search_padding);
+        border-radius: var(--card_border_radious);
+    }
+
+    .customize_theme .choose_size
+    {
+        background: var(--color_secondary);
+        height: 0.3rem;
+        width: 100%;
+        margin: 0 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .customize_theme .choose_size span
+    {
+        width: 1rem;
+        height: 1rem;
+        background: var(--color_secondary);
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .customize_theme .choose_size span.active
+    {
+        background: var(--color_primary );
+    }
+
+    /*------------------FONT SIZE------------------------*/
+
+    .customize_theme .color
+    {
+        margin-top: 2rem;
+    }
+
+    .customize_theme .choose_color
+    {
+        background: var(--color_light);
+        padding: var(--search_padding);
+        border-radius: var(--card_border_radious);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .customize_theme .choose_color span
+    {
+        width: 2.2rem;
+        height: 2.2rem;
+        border-radius: 50%;
+    }
+
+    .customize_theme .choose_color span:nth-child(1)
+    {
+        background: hsl(252, 75%, 60%);
+    }
+    .customize_theme .choose_color span:nth-child(2)
+    {
+        background: hsl(52, 75%, 60%);
+    }
+    .customize_theme .choose_color span:nth-child(3)
+    {
+        background: hsl(352, 75%, 60%);
+    }
+    .customize_theme .choose_color span:nth-child(4)
+    {
+        background: hsl(152, 75%, 60%);
+    }
+    .customize_theme .choose_color span:nth-child(5)
+    {
+        background: hsl(202, 75%, 60%);
+    }
+
+    .customize_theme .choose_color span.active
+    {
+        border: 5px solid white;
+    }
+
+
+    /*-----------------------BACKGROUND-----------------------*/
+
+    .customize_theme .background
+    {
+        margin-top: 2rem;
+    }
+
+    .customize_theme .choose_bg
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.5rem;
+    }
+
+    .customize_theme .choose_bg >div
+    {
+        padding: var(--card_padding);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 1rem;
+        font-weight: bold;
+        border-radius: 0.4rem;
+        cursor: pointer;
+    }
+
+    .customize_theme .choose_bg >div.active
+    {
+        border: 2px solid var(--color_primary);
+    }
+
+    .customize_theme .choose_bg .bg_1
+    {
+        background: white;
+        color: black;
+    }
+    .customize_theme .choose_bg .bg_2
+    {
+        background: hsl(252, 30%, 17%);
+        color: white;
+    }
+    .customize_theme .choose_bg .bg_3
+    {
+        background: hsl(252, 30%, 10%);
+        color: white;
+    }
+
+    .customize_theme .choose_bg >div span
+    {
+        width: 2rem;
+        height: 2rem;
+        border: 2px solid var(--color_gray);
+        border-radius: 50%;
+        margin-right: 1rem;
+    }
+
+    /*------------1.43.14------------------*/
