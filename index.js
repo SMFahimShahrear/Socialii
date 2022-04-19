@@ -13,6 +13,9 @@ const themeModal = document.querySelector('.customize_theme');
 const fontSizes = document.querySelectorAll('.choose_size span');
 var root = document.querySelector(':root');
 const colorPalette = document.querySelectorAll('.choose_color span');
+const Bg1 = document.querySelector('.bg_1');
+const Bg2 = document.querySelector('.bg_2');
+const Bg3 = document.querySelector('.bg_3');
 
 //------------------SIDEBAR---------------------------//
 
@@ -161,6 +164,15 @@ menuItems.forEach(item =>
         
     })
 
+
+
+const changeActiveColorClass = () =>
+{
+    colorPalette.forEach(colorPicker =>
+        {
+            colorPicker.classList.remove('active');
+        })
+}
     
 //Change Primary Colors
 colorPalette.forEach(color =>
@@ -168,6 +180,9 @@ colorPalette.forEach(color =>
         color.addEventListener('click', () =>
         {
             let primary;
+            //remove active for color spans
+            changeActiveColorClass();
+
             if(color.classList.contains('color_1'))
             {
                 primaryHue = 252;
@@ -188,7 +203,59 @@ colorPalette.forEach(color =>
             {
                 primaryHue = 202;
             }
+            color.classList.add('active');
 
             root.style.setProperty('--primary_color_hue', primaryHue);
         })
+    })
+
+    //Theme Background Values
+    let lightColorLightness;
+    let whiteColorLightness;
+    let darkColorLightness;
+
+    //change background color
+    const changeBG = () =>
+    {
+        root.style.setProperty('--light_color_lightness', lightColorLightness);
+        root.style.setProperty(' --white_color_lightness', whiteColorLightness);
+        root.style.setProperty('--dark_color_lightness', darkColorLightness);
+    }
+
+    Bg1.addEventListener('click', () => 
+    {
+        //add active class
+        Bg1.classList.add('active');
+        //remove active class from others
+        Bg2.classList.remove('active');
+        Bg3.classList.remove('active');
+        //remove customize changes
+        window.location.reload();
+    })
+    
+    Bg2.addEventListener('click', () => 
+    {
+        darkColorLightness= '95%';
+        whiteColorLightness= '20%';
+        lightColorLightness= '15%';
+
+        //add active class
+        Bg2.classList.add('active');
+        //remove active class from others
+        Bg1.classList.remove('active');
+        Bg3.classList.remove('active');
+        changeBG();
+    })
+
+    Bg3.addEventListener('click', () => 
+    {
+        darkColorLightness= '95%';
+        whiteColorLightness= '10%';
+        lightColorLightness= '0%';
+        //add active class
+        Bg3.classList.add('active');
+        //remove active class from others
+        Bg1.classList.remove('active');
+        Bg2.classList.remove('active');
+        changeBG();
     })
